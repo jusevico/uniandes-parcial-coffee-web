@@ -27,3 +27,6 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 __screenshots__/
+
+# Project documentation (local only)
+/.docs/

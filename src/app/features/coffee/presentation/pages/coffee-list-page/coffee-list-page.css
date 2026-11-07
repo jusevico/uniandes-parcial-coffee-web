@@ -1,0 +1,43 @@
+.banner {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  /* Alto fijo y fluido: entre 180px y 380px según el ancho de la pantalla */
+  height: clamp(180px, 22vw, 380px);
+  object-fit: cover;
+  object-position: center;
+}
+
+.coffee-table-wrapper {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.coffee-table {
+  width: 100%;
+  --bs-table-striped-bg: #efe3d8;
+  --bs-table-striped-color: #212529;
+}
+
+/* Filas alternas: explícito para no depender de las variables internas de Bootstrap */
+.coffee-table tbody tr:nth-of-type(odd) > * {
+  background-color: #efe3d8;
+  box-shadow: none;
+}
+
+.coffee-table tbody tr:nth-of-type(even) > * {
+  background-color: #fff;
+  box-shadow: none;
+}
+
+.coffee-table th,
+.coffee-table td {
+  padding: 0.7rem 1.5rem 0.7rem 0.9rem;
+}
+
+.coffee-table thead th {
+  background-color: #4b2e1e;
+  color: #fff;
+  font-weight: 600;
+}

@@ -1,0 +1,29 @@
+<img class="banner w-100 rounded shadow-sm" src="banner.jpg" alt="Coffee beans" />
+<hr />
+
+@if (state.error()) {
+  <div class="alert alert-danger" role="alert">{{ state.error() }}</div>
+}
+
+<div class="table-responsive coffee-table-wrapper rounded shadow-sm mb-4">
+<table class="table table-striped align-middle mb-0 coffee-table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Región</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (coffee of state.coffees(); track coffee.id) {
+      <tr>
+        <th scope="row">{{ coffee.id }}</th>
+        <td>{{ coffee.name }}</td>
+        <td>{{ coffee.type }}</td>
+        <td>{{ coffee.region }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+</div>
