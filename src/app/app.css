@@ -11,3 +11,32 @@ header {
 .text-brown {
   color: #4b2e1e;
 }
+
+/* Footer siempre al fondo de la pantalla, aunque el contenido sea corto */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1 0 auto;
+}
+
+.app-footer {
+  flex-shrink: 0;
+  padding-top: 12px;
+  text-align: center;
+  color: #000;
+  background-color: #f1f1f1;
+  border-top: 1px solid #dcdcdc;
+}
+
+.app-footer__text {
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+.app-footer__text strong {
+  font-weight: 400;
+}
