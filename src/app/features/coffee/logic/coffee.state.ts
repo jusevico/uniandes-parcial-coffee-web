@@ -1,5 +1,5 @@
-import { Injectable, inject, signal } from '@angular/core';
-import { Coffee } from '../services/coffee.model';
+import { Injectable, computed, inject, signal } from '@angular/core';
+import { COFFEE_TYPE, Coffee } from '../services/coffee.model';
 import { CoffeeService } from '../services/coffee.service';
 
 @Injectable()
@@ -9,6 +9,14 @@ export class CoffeeState {
   readonly coffees = signal<Coffee[]>([]);
   readonly loading = signal(false);
   readonly error = signal<string | null>(null);
+
+  readonly originCount = computed(
+    () => this.coffees().filter((c) => c.type === COFFEE_TYPE.ORIGIN).length,
+  );
+
+  readonly blendCount = computed(
+    () => this.coffees().filter((c) => c.type === COFFEE_TYPE.BLEND).length,
+  );
 
   load(): void {
     this.loading.set(true);
