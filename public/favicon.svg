@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="bean-clip">
+      <ellipse cx="0" cy="0" rx="88" ry="138" />
+    </clipPath>
+    <g id="bean">
+      <ellipse cx="0" cy="0" rx="88" ry="138" fill="#A9624A" />
+      <g clip-path="url(#bean-clip)">
+        <ellipse cx="16" cy="0" rx="82" ry="146" fill="#C67650" />
+        <path d="M -8 -150 C 50 -70 -60 -20 0 55 C 25 90 25 120 10 150"
+              fill="none" stroke="#A9624A" stroke-width="24" stroke-linecap="round" />
+      </g>
+    </g>
+  </defs>
+  <use href="#bean" transform="translate(305 150) rotate(12)" />
+  <use href="#bean" transform="translate(132 295) rotate(-42)" />
+  <use href="#bean" transform="translate(380 372) rotate(50)" />
+</svg>

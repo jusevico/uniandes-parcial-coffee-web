@@ -1,0 +1,13 @@
+header {
+  text-align: center;
+}
+
+.app-title {
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.text-brown {
+  color: #4b2e1e;
+}
